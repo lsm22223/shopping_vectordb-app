@@ -52,12 +52,12 @@
 │   ├── package.json        # 패키지 설정 파일
 │   ├── public/            
 │   ├── src/               
-│ │ ├── components/
-│ │ │ └── ResultCard.vue    # 검색 결과 카드를 표시하는 컴포넌트
-│ │ ├── views/
-│ │ │ └── SearchView.vue    # 검색 결과를 표시하는 뷰
-│ │ └── router/
-│ │ └── index.js            # 라우터 설정 파일
+│   ├── components/
+│   │ └── ResultCard.vue    # 검색 결과 카드를 표시하는 컴포넌트
+│   ├── views/
+│   │ └── SearchView.vue    # 검색 결과를 표시하는 뷰
+│   └── router/
+│   └── index.js            # 라우터 설정 파일
 │   └── vite.config.js      # Vite 설정 파일
 └── README.md               
 
@@ -101,3 +101,25 @@ SAVE_EMB_PATH=임베딩 저장 위치
 CHROMA_DIR=./chroma_store
 MODEL_NAME=snunlp/KR-SBERT-V40K-klueNLI-augSTS
 BATCH_SIZE=100
+
+------------------------------------------------------------------------------------------
+
+5. 프론트엔드 실행
+
+cd frontend
+npm install
+npm run dev
+
+------------------------------------------------------------------------------------------
+
+6. 백엔드 실행
+
+cd backend
+uvicorn main:app --reload
+
+------------------------------------------------------------------------------------------
+
+7. 브라우저에서 접속
+
+URL_ADDRESS:5173/ # 프론트엔드 주소
+http://127.0.0.1:8000/docs # Swagger 
