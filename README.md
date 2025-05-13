@@ -48,18 +48,14 @@ Python 3.10 이상
 가상환경 이름: vector
 
 1. 가상환경 생성 및 활성화
-bash
-복사
-편집
+
 python -m venv vector
 source vector/Scripts/activate  # Windows 기준
 
 ------------------------------------------------------------------------------------------
 
 2. 의존 패키지 설치
-bash
-복사
-편집
+
 pip install -r requirements.txt
 
 ------------------------------------------------------------------------------------------
@@ -78,4 +74,10 @@ python 3_test_search_chroma.py
 
 ------------------------------------------------------------------------------------------
 
+4. .env 예시
 
+DATA_PATH=데이터 저장 위치
+SAVE_EMB_PATH=임베딩 저장 위치
+CHROMA_DIR=./chroma_store
+MODEL_NAME=snunlp/KR-SBERT-V40K-klueNLI-augSTS
+BATCH_SIZE=100
