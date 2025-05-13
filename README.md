@@ -82,13 +82,13 @@ pip install -r requirements.txt
 
 3. 실행 순서
 
-# 1. 상품 설명 → 벡터 임베딩 후 저장
+ 1. 상품 설명 → 벡터 임베딩 후 저장
 python 1_embed_products.py
 
-# 2. 벡터를 ChromaDB에 저장
+ 2. 벡터를 ChromaDB에 저장
 python 2_save_chromaDB.py
 
-# 3. 의미 기반 검색 테스트
+ 3. 의미 기반 검색 테스트
 python 3_test_search_chroma.py
 검색어 예시: "남자 운동화", "안티에이징 화장품", "남자 화장품"
 
