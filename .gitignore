@@ -1,0 +1,7 @@
+# .gitignore
+.env
+__pycache__/
+*.pyc
+chroma_store/
+embeddings.json
+product_data_10k.json
