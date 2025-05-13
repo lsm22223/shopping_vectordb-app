@@ -30,18 +30,38 @@
 
 ```plaintext
 .
-├── .env                    # 환경변수 설정 파일 (경로 및 설정 값)
-├── .gitignore              # 불필요하거나 민감한 파일 제외
-├── config.py               # .env 설정을 Python에서 사용하도록 로드
-├── common.py               # 모델 로딩 및 ChromaDB 컬렉션 함수
-├── 1_embed_products.py     # 상품 설명 임베딩 및 저장
-├── 2_save_chromaDB.py      # 저장된 임베딩을 ChromaDB에 저장
-├── 3_test_search_chroma.py # 사용자가 질의어를 입력해 유사 상품 검색
-├── requirements.txt        # 필요 패키지 목록
-├── chroma_store/           # ChromaDB의 로컬 저장소 (Git 제외됨)
-└── embeddings.json         # 임베딩된 벡터 파일 (Git 제외됨)
+├── backend/                # 백엔드 관련 파일 및 스크립트
+│   ├── .gitignore         
+│   ├── config.py          
+│   ├── common.py           # 모델 로딩 및 ChromaDB 컬렉션 함수
+│   ├── 1_embed_products.py # 상품 설명 임베딩 및 저장
+│   ├── 2_save_chromaDB.py  # 저장된 임베딩을 ChromaDB에 저장
+│   ├── 3_test_search_chroma.py # 사용자가 질의어를 입력해 유사 상품 검색
+│   ├── endpoint_search.py  # 검색 엔드포인트 정의
+│   ├── main.py             # 애플리케이션 진입점
+│   └── requirements.txt    # 필요 패키지 목록
+├── frontend/               # 프론트엔드 관련 파일 및 스크립트
+│   ├── .editorconfig       
+│   ├── .gitattributes     
+│   ├── .gitignore         
+│   ├── .prettierrc.json    # 코드 포맷 설정
+│   ├── eslint.config.js   
+│   ├── index.html          # 메인 HTML 파일
+│   ├── jsconfig.json       
+│   ├── package-lock.json  
+│   ├── package.json        # 패키지 설정 파일
+│   ├── public/            
+│   ├── src/               
+│ │ ├── components/
+│ │ │ └── ResultCard.vue    # 검색 결과 카드를 표시하는 컴포넌트
+│ │ ├── views/
+│ │ │ └── SearchView.vue    # 검색 결과를 표시하는 뷰
+│ │ └── router/
+│ │ └── index.js            # 라우터 설정 파일
+│   └── vite.config.js      # Vite 설정 파일
+└── README.md               
 
-------------------------------------------------------------------------------------------
+```
 
 Python 3.10 이상
 
@@ -70,7 +90,7 @@ python 2_save_chromaDB.py
 
 # 3. 의미 기반 검색 테스트
 python 3_test_search_chroma.py
-검색어 예시: "남자 운동화", "고급 가죽 자켓", "스포츠웨어"
+검색어 예시: "남자 운동화", "안티에이징 화장품", "남자 화장품"
 
 ------------------------------------------------------------------------------------------
 
